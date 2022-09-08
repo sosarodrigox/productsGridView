@@ -32,7 +32,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      scrollBehavior: CustomScrollBehavior(),
+      //https://docs.flutter.dev/release/breaking-changes/default-scroll-behavior-drag
+      scrollBehavior: CustomScrollBehavior(), //Clase creada para que que funcione el scroll horizontal en web y windowsapps
       debugShowCheckedModeBanner: false,
       title: 'Grilla de productos',
       theme: ThemeData(
