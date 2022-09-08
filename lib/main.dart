@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../grillaprod.dart' as grilla;
+import 'customScrollBehavior.dart';
 import 'producto.dart';
 import 'themegrandi.dart' as themegrandi;
 
@@ -31,29 +32,27 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      scrollBehavior: CustomScrollBehavior(),
+      debugShowCheckedModeBanner: false,
       title: 'Grilla de productos',
-      
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           backgroundColor: themegrandi.Colors.colorAccion,
         ),
       ),
-
       home: Scaffold(
         backgroundColor: themegrandi.Colors.colorFondo,
         appBar: AppBar(
           title: const Text('Grilla Prueba'),
         ),
         body: Center(
-          
           child: grilla.GrillaProductos().build(context,
                                                 listaProductos,
-                                                4,
+                                                1,
                                                 Axis.horizontal,
                                                 themegrandi.Colors.colorAccion,
                                                 themegrandi.Colors.colorPrincipal
-                                                ),
-                                                
+                                                ),                                               
         ),
       ),
     );
@@ -63,5 +62,5 @@ class MyApp extends StatelessWidget {
 //Para resolver:
 //onTap: Navigator, (Ver con Mateo)
 //Ver navigator, lambda, setState (Controlar ID Prod) (Ver con Mateo)
-//Scroll horizontal en web-appwindows - Debe detectar rueda del mouse (Viendo)
+//Scroll horizontal en web-appwindows (Listo) - Debe detectar rueda del mouse (Viendo)
 //Textos que varien con los tamaños de pantalla (Listo)
