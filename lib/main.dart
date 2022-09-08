@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
           
           child: grilla.GrillaProductos().build(context,
                                                 listaProductos,
-                                                2,
+                                                4,
                                                 Axis.horizontal,
                                                 themegrandi.Colors.colorAccion,
                                                 themegrandi.Colors.colorPrincipal
@@ -61,6 +61,7 @@ class MyApp extends StatelessWidget {
 }
 
 //Para resolver:
-//onTap: Navigator,
-//Ver navigator, lambda, setState (Controlar ID Prod)
-//Textos que varien con los tamaños de pantalla
+//onTap: Navigator, (Ver con Mateo)
+//Ver navigator, lambda, setState (Controlar ID Prod) (Ver con Mateo)
+//Scroll horizontal en web-appwindows - Debe detectar rueda del mouse (Viendo)
+//Textos que varien con los tamaños de pantalla (Listo)
